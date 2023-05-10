@@ -29,10 +29,10 @@
                     })
                     break;
                 }
-                default: {
-                    // TODO: replace CSS background image elements
-                    break;
-                }
+            }
+            const style = window.getComputedStyle(element);
+            if (style.backgroundImage !== 'none') {
+                element.style.backgroundImage = 'url(newImageURL)';
             }
         });
     }
